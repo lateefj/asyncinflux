@@ -1,4 +1,4 @@
-async_influx
+asyncinflux
 ============
 
-Async Infuxdb Python API
+Async InfluxDB writer in Python
