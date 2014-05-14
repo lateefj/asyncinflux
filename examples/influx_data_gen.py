@@ -1,8 +1,11 @@
 import time
 import os
 from random import random, randint
+
+from gevent import sleep
 from asyncinflux import AsyncWriter
 from influxdb import client as influxdb
+
 db = influxdb.InfluxDBClient(database="test")
 writer = AsyncWriter(db)
 writer.start()
@@ -17,4 +20,5 @@ while True:
     }]
     #print(point)
     writer.write_points(point)
-    time.sleep(0.1)
+    sleep(0.1)
+writer.stop()

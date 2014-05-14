@@ -22,7 +22,7 @@ class AsyncWriter:
     def stop(self):
         """Stop the writting of data points"""
         self.q.put_nowait(StopIteration)
-        self.background.kill()
+        self.background.join()
 
     def write_points(self, body):
         """ Basically wraps the influxdb call """
