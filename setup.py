@@ -4,7 +4,7 @@ from setuptools import setup
 DESCRIPTION = """Uses codap to provide async influxdb"""
 setup(
     name='asyncinflux',
-    version='0.0.3',
+    version='0.0.4',
     author='Lateef H. Jackson',
     author_email='lateef.jackson@gmail.com',
     description=(DESCRIPTION),
@@ -14,6 +14,7 @@ setup(
     packages=['asyncinflux', 'tests'],
     install_requires=[
         'influxdb',
+        'gevent',
         'codap',
     ],
     classifiers=[

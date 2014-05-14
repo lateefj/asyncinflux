@@ -6,8 +6,8 @@ asyncinflux
 Async InfluxDB writer Python library.
 -------------------------------------
 
-This is just a little hack for writing async to an influx database. IT REQUIRES gevent
+This is just a little hack for writing async to an influx database. IT REQUIRES gevent.
 
 ```sh
-pip install asyncinflux --upgrade
+pip install gevent asyncinflux --upgrade
 ```
