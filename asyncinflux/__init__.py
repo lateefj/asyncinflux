@@ -1,7 +1,7 @@
 from codap import spawn, Queue
 
 
-class AsyncWriteClient:
+class AsyncWriter:
     RUN = False
     def __init__(self, client):
         """Wraps the client connection with an async call"""
@@ -32,9 +32,3 @@ class AsyncWriteClient:
                 self.client.write_points(data)
 
         self.stop_q.put(None)
-
-
-
-
-
-

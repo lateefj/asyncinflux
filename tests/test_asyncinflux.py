@@ -19,7 +19,7 @@ class TestAsycWriteClient(unittest.TestCase):
 
     def test_single(self):
         mic = MockInfluxClient()
-        awc = asyncinflux.AsyncWriteClient(mic)
+        awc = asyncinflux.AsyncWriter(mic)
         awc.start()
         awc.write_points([{"foo": "bar"}])
         awc.stop()
@@ -29,7 +29,7 @@ class TestAsycWriteClient(unittest.TestCase):
 
     def test_multiple(self):
         mic = MockInfluxClient()
-        awc = asyncinflux.AsyncWriteClient(mic)
+        awc = asyncinflux.AsyncWriter(mic)
         awc.write_points([{"foo": "bar1"}])
         awc.write_points([{"foo": "bar2"}])
         awc.start()
