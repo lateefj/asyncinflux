@@ -12,10 +12,9 @@ writer.start()
 while True:
     cpu = os.times()
     point = [{
-        "time":  time.time(),
-        "points": [[random(), randint(1, 100)]],
+        "points": [[time.time(), random(), randint(1, 100)]],
         "name": u"cpu_memory",
-        "columns":[u"load", u"memory_percent"]
+        "columns":[u"time", u"load", u"memory_percent"]
 
     }]
     #print(point)
